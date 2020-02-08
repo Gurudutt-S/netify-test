@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <header>
+
+
+        <!-- row1 for logo -->
+
+        <nav class="navbar navbar-light bg-light justify-content-center ">
+            <a class="navbar-brand" href=#>
+                <img src="images/logo.png" class="d-inline-block align-top " width="80px">
+                <span class="display-4">Gift Treasure</span>
+            </a>
+        </nav>
+
+        <!-- row 1 for logo ends -->
+
+        <!-- navbar starts -->
+
+        <div class="row">
+            <div class="col-12">
+                <!-- row2 for nav bar -->
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark justify-content-center">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class=" nav-link " href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="placeOrder.html">Place Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" nav-link" href="viewOrderlist.html">View Order</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class=" nav-link active " href="contactUs.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- navbar ends -->
+
+    <!-- The sidebar starts-->
+
+    <!-- <div class="container-fluid"> -->
+    <div class="row no-gutters">
+        <div class="col-2 bg-dark text-center">
+            <ul class="nav flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link text-light  active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light " href="placeOrder.html">Place Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light " href="viewOrderlist.html">View Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light " href="contactUs.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- The sidebar ends-->
+
+        <!-- Page content starts-->
+        <div class="col m-3 ">
+
+            <div class="container w-75  shadow p-5  bg-light">
+                <!--Section: Contact v.2-->
+                <section>
+                    <!--Section heading-->
+                    <h2 class="responsive display-4 text-muted text-center my-2">Contact us</h2>
+                    <!--Section description-->
+                    <p class="text-center responsive mx-auto mb-3">Do you have any questions? Please do not hesitate to
+                        contact
+                        us directly. </p>
+                    <div class="text-center">
+                        <form id="contact-form" name="contact-form" class="text-center" action="" method="POST">
+                            <div class="md-form ">
+                                <label for="name" class="">Your name</label>
+                                <input type="text" id="name" name="name" class="form-control">
+                            </div>
+
+                            <div class="md-form">
+                                <label for="email" class="">Your email</label>
+                                <input type="text" id="email" name="email" class="form-control">
+
+                            </div>
+                            <div class="md-form mb-0">
+                                <label for="subject" class="">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-control">
+
+                            </div>
+                            <div class="md-form">
+                                <label for="message">Your message</label>
+                                <textarea type="text" id="message" name="message" rows="2"
+                                    class="form-control md-textarea"></textarea>
+                            </div>
+
+                            <div class="text-center my-4">
+                                <a class="btn btn-primary w-50" onclick="validateForm();">Send</a>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="text-center">
+                        <h5>For any queries, contact: </h5>
+
+                        <div class="row">
+                            <div class="col">
+                                <img src="images/phn.png" width="75" height="75" />
+                                <p>9874987439</p>
+                            </div>
+                            <div class="col">
+                                <img src="images/mail.png" width="75" height="75" />
+                                <p>GiftTreasure@gmail.com </p>
+                            </div>
+                            <div class="col">
+                                <img src="images/loc.png" width="75" height="75" />
+                                <p> Chennai</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+                <script src="contact-form.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- Page content ends-->
+
+    <!-- footer starts -->
+
+    <footer class="page-footer bg-dark text-white">
+        <div class="text-center p-2">
+            <p>&copy; Company Gift Treasure: 2020</p>
+        </div>
+    </footer>
+
+    <!-- footer ends -->
+
+
+
+
+
+
+
+
+</body>
+
+</html>

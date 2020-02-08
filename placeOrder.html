@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script rel="script" src="js/script.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <header>
+
+
+        <!-- row1 for logo -->
+
+        <nav class="navbar navbar-light bg-light justify-content-center ">
+            <a class="navbar-brand" href=#>
+                <img src="images/logo.png" class="d-inline-block align-top rounded" width="80px">
+                <span class="display-4">Gift Treasure</span>
+            </a>
+        </nav>
+
+        <!-- row 1 for logo ends -->
+
+        <!-- navbar starts -->
+
+        <div class="row">
+            <div class="col-12">
+                <!-- row2 for nav bar -->
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark justify-content-center">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class=" nav-link " href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="placeOrder.html">Place Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" nav-link" href="viewOrderlist.html">View Order</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class=" nav-link " href="contactUs.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- navbar ends -->
+
+    <!-- The sidebar starts-->
+
+    <!-- <div class="container-fluid"> -->
+    <div class="row no-gutters">
+        <div class="col-2 bg-dark text-center">
+            <ul class="nav flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link text-light  active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light " href="placeOrder.html">Place Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light " href="viewOrderlist.html">View Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light " href="contactUs.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- The sidebar ends-->
+
+        <!-- Page content starts-->
+        <div class="col m-3">
+
+            <div class="responsive container w-75 shadow p-3 lg-5 bg-light text-center">
+                <form onsubmit="save()">
+                    <h2 class="text-center text-muted display-4">Place Gift Order</h2>
+                    <div class="form-group">
+                        <label for="giftCardAmount">Gift Card Amount :</label>
+                        <input type="number" class="form-control-sm " size="2" id="giftRamount" placeholder="INR"
+                            name="giftCardAmount" required> :
+                        <input type="number" class="form-control-sm " size="2" id="giftPamount" placeholder="PAISA"
+                            name="giftCardAmount" min="0" max="99">
+                    </div>
+                    <div class="form-group">
+                        <label for="receipentName">Receipent Name :</label>
+                        <input type="text" class="form-control-md" id="receipentFirstName" placeholder="Enter FirstName"
+                            name="ReceipentFirstName" pattern="[A-Za-z\\s]*" required>
+                        <input type="text" class="form-control-md" id="receipentLastName" placeholder="Enter LastNmae"
+                            name="ReceipentName" pattern="[A-Za-z\\s]*">
+                    </div>
+                    <div class="responsive shadow h-50">
+                        <div class="card-body">
+                            <h3 class="text-center text-muted">Shipping Address</h3>
+                            <div class="form-group">
+                                <input type="text" class="form-control " id="street" placeholder="Enter Street Address"
+                                    name="saddress" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control-sm" id="city" placeholder="Enter City"
+                                    name="city" required>
+                                <input type="text" class="form-control-sm" id="state" placeholder="Enter state"
+                                    name="state" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="country">
+                                    <option value="India">India</option>
+                                    <option value="London">London</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="America">America</option>
+                                </select>
+                                <input type="text" class="form-control-md " size="9" maxlength="6" id="pincode"
+                                    placeholder="Enter Pincode" name="pincode" pattern="[0-9]*" required>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="buyer'sname">Buyer's Name :</label>
+                        <input type="text" class="form-control-sm" id="buyerFirstName" placeholder="Enter FirstName"
+                            name="buyer'sFirstName" pattern="[A-Za-z\\s]*" required>
+                        <input type="text" class="form-control-sm" id="buyerLastName" placeholder="Enter LastName"
+                            name="buyer'sLastNmae" pattern="[A-Za-z\\s]*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number :</label>
+                        <input type="text" size="2" value="+91" readonly="readonly" id="countryCode" />&nbsp-<input
+                            type="text" size="1" maxlength="1" id="p1" />
+                        <input type="text" size="1" maxlength="1" id="p2" pattern="[6-9]" required />
+                        <input type="text" size="1" maxlength="1" id="p3" pattern="[0-9]" required />
+                        <input type="text" size="1" maxlength="1" id="p4" pattern="[0-9]" required />
+                        <input type="text" size="1" maxlength="1" id="p5" pattern="[0-9]" required />
+                        <input type="text" size="1" maxlength="1" id="p6" pattern="[0-9]" required />
+                        <input type="text" size="1" maxlength="1" id="p7" pattern="[0-9]" required />
+                        <input type="text" size="1" maxlength="1" id="p8" pattern="[0-9]" required />
+                        <input type="text" size="1" maxlength="1" id="p9" pattern="[0-9]" required />
+                        <input type="text" size="1" maxlength="1" id="p10" pattern="[0-9]" required /><br />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        <input type="email" class="form-control-sm" id="email" placeholder="Enter Email" name="email"
+                            required>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-success w-50">Place Order</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- Page content ends-->
+
+    <!-- footer starts -->
+
+    <footer class="page-footer bg-dark text-white">
+        <div class="text-center p-2">
+            <p>&copy; Company Gift Treasure: 2020</p>
+        </div>
+    </footer>
+
+    <!-- footer ends -->
+
+
+
+
+
+
+
+
+</body>
+
+</html>
