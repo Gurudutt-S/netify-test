@@ -1,42 +1,4 @@
-// contact Us validation
 
-function validateForm() {
-    var name = document.getElementById('name').value;
-    if (name == "") {
-        document.querySelector('.status').innerHTML = "Name cannot be empty";
-        return false;
-    }
-    else {
-        var inputEmail = document.getElementById("name");
-        localStorage.setItem("name", inputEmail.value);
-
-    }
-
-}
-
-var subject = document.getElementById('subject').value;
-if (subject == "") {
-    document.querySelector('.status').innerHTML = "Subject cannot be empty";
-    return false;
-}
-else {
-    var inputEmail = document.getElementById("subject");
-    localStorage.setItem("subject", inputEmail.value);
-
-}
-
-var message = document.getElementById('message').value;
-if (message == "") {
-    document.querySelector('.status').innerHTML = "Message cannot be empty";
-    return false;
-}
-else {
-    var inputEmail = document.getElementById("message");
-    localStorage.setItem("message", inputEmail.value);
-
-}
-document.querySelector('.status').innerHTML = "Sent";
-}
 
 
 // form local storage
